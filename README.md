@@ -16,7 +16,7 @@ docker compose up -d
 docker compose exec koujishi-com-embulk bash
 ```
 
-3. Embuik 実行コマンドを叩く
+3. Embulk 実行コマンドを叩く
 
 ```
 embulk run /work/config/[対象ファイル]
