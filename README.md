@@ -13,13 +13,13 @@ docker compose up -d
 2. Docker コンテナに内に入る
 
 ```
-docker compose exec koujishi-com-embulk bash
+docker compose exec docker-embulk-example bash
 ```
 
-3. Embulk 実行コマンドを叩く
+3. Embuik 実行コマンドを叩く
 
 ```
-embulk run /work/config/[対象ファイル]
+embulk run --enable-liquid /work/config/[対象ファイル]
 ```
 
 ## フォルダ内容
