@@ -1,0 +1,23 @@
+in:
+  type: {{ env.DB_DRIVER }}
+  host: {{ env.DB_HOST }}
+  user: {{ env.DB_USERNAME }}
+  password: {{ env.DB_PASSWORD }}
+  database: {{ env.DB_NAME }}
+  port: {{ env.DB_PORT }}
+  query: "select * from test limit 0,10;"
+out:
+  type: file
+  path_prefix: "/output/test"
+  file_ext: ".csv"
+  formatter:
+    type: csv
+    delimiter: ","
+    newline: CRLF
+    newline_in_field: LF
+    charset: UTF-8
+    quote_policy: MINIMAL
+    quote: '"'
+    escape: "\\"
+    null_string: "\\N"
+    default_timezone: "Asia/Tokyo"

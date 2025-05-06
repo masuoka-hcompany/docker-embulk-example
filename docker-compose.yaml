@@ -1,0 +1,13 @@
+version: "3.9"
+services:
+  docker-embulk-example:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: docker-embulk-example
+    volumes:
+      - ./output:/output
+      - ./config:/work/config
+    env_file:
+      - .env
+    tty: true
